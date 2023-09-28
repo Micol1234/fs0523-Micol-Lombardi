@@ -1,0 +1,32 @@
+/* IMPOSTAZIONI GENERALI */
+body{
+    background-image: url(..css/img/sfondo.png);
+   
+}
+.maiuscolo{ text-transform: uppercase;
+color: white;
+font-weight: bold;}
+
+
+
+/* HEADER */
+.centro{ text-align: center;}
+.margine{ padding: 10px;
+    border: 10px; margin-bottom: 10px;
+margin: auto;}
+header{  
+background-color: aqua;}
+
+
+/* MAIN */
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
+
