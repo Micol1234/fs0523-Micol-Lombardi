@@ -1,0 +1,112 @@
+/* Your styles here */
+header{
+    background-image: url(../images/banner.jpg);
+   background-position: 100%;
+   margin: 10px;
+   text-align: center;
+   background-color: black;
+   margin: 0;
+   padding: 30px;
+}
+
+p{
+    padding: 40px;
+}
+body{
+    color: #393d41;
+    font-size: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    background-color: black;
+    margin: 0;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6{
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+h1{
+    font-size: 5rem;
+    padding: 10px;
+}
+.bottone{ text-decoration: none;
+color: white;
+background-color: orangered;
+padding:10px 20px;
+border-radius: 10%;
+margin: 20px;
+text-transform: uppercase;}
+footer h1{
+    color: white;
+}
+footer{
+    color: #c8e7f0;
+   background-color: #25a2c3;
+    text-align: center;
+    margin: 0;
+    border: 0;
+    padding: 120px;
+  
+}
+footer a{
+    color: #c8e7f0;
+    
+}
+.orange{
+    background-color: #e22d0e;
+
+    color: white;
+    text-align: center;
+}
+.bianco{
+    color: white;
+    font-size: 2rem;
+}
+.tutti{
+    padding: 30px;
+}
+.lavora{
+    padding: 30px;
+}
+
+.notebook1{
+    border-radius: 50%;
+    background-color: white;
+margin: 0;
+}
+.scegli{
+    padding: 30px;
+}
+.lavoro{ padding: 30px;}
+
+main{background-color: white;}
+.box1{
+   
+    margin: 50px;
+    border: 2px solid rgb(121, 121, 121);
+   
+}
+section img:not(.notebook1){
+    width: 100%;
+}
+.box2{
+    margin: 50px;
+    border: 2px solid rgb(121, 121, 121);
+}
+.box3
+    {
+        margin: 50px;
+        border: 2px solid rgb(121, 121, 121);
+    }
+.contattaci{
+    padding: 30px;
+}
+.footer{
+    padding: 30px;
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+.logo2{background-color: black;
+
+padding:200px;}
