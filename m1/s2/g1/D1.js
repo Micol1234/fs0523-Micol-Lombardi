@@ -10,7 +10,15 @@ REGOLE
 /* ESERCIZIO 1
  Elenca e descrivi i principali datatype in JavaScript. Prova a spiegarli come se volessi farli comprendere a un bambino.
 */
+//*Numero= si tratta di cifre numeriche
 
+//*Stringa= è una sequenza di caratteri
+
+//*Boleano= ha solo due valori vero o falso
+ 
+//*Array=lista ordinata di oggetti
+
+//*Oggetti= insieme di oggetti
 
 
 /* ESERCIZIO 2
