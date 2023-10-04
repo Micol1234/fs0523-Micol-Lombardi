@@ -6,7 +6,7 @@ let n2=20
 let numeroMaggiore
 if(n1>n2){numeroMaggiore=10
   console.log(numeroMaggiore)}
-  else{
+  else {
     numeroMaggiore=20
     console.log(numeroMaggiore)
   }
