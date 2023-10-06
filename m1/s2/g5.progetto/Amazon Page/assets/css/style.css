@@ -1,0 +1,83 @@
+/* Your styles here */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+  
+}
+header{
+    text-align: left;
+    background-color: rgb(44, 44, 69);
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(75, 75,115);
+
+}
+nav{
+    border: 10px solid rgb(75, 75, 115);
+}
+.logo{ padding: 20px;}
+
+.arancio{background-color: orangered;
+border: 1px solid orangered;
+padding: 20px;
+margin: 30px;
+margin-right: 20px;
+}
+.bianco{
+    background-image:url(../images/bg-image.png) ;
+    color: white;
+    margin: 0;
+font-weight: 800;
+    padding: 30px;
+    font-size: x-large;
+    
+}
+.bianco2{
+    background-image: url(../images/bg-image.png);
+    color: white;
+    margin: 0;
+font-weight: 800;
+font-size: larger;
+    padding: 30px;
+}
+
+.lato{
+    text-align: left;
+    padding: 20px;
+}
+
+.sezione img{padding: 10px;
+border-radius: 15%;
+width: 300px;
+padding: 30px;
+background-color: beige;
+}
+.sezione{
+    display: inline-flex;
+}
+.foto img{
+   padding: 50px;
+   width: 1500px
+}
+footer {
+    display: block;
+    color: white;
+    text-decoration: none;
+    border: 10px solid rgb(75, 75, 115);
+    background-color: rgb(75, 75, 115);
+    padding: 30px;
+    text-align: center;
+   
+ 
+
+}
+.padding{
+    padding: 50px;
+    text-align: center;
+}
+
+footer img{background-color: rgb(44, 44, 69);
+    border: 30px solid rgb(44, 44, 69);
+}
