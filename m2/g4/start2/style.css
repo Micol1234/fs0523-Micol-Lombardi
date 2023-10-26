@@ -1,0 +1,58 @@
+:root {
+    --giallo: #fefece;
+    --verde: #ccfece;
+    --viola: #cacafa;
+}
+
+body{
+    background-color: #555661;
+}
+#area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    background-color: #555661;
+    text-align: center;
+    font-size: 2rem;
+    font-family: cursive;
+    
+   
+}
+
+#q1, #q5, #q7{
+    height: 300px;
+    width: 300px;
+    background-color: #fefece;
+    border: 1px solid black;
+    background-image: linear-gradient(var(--giallo) 0%, var(--giallo) 75%, #f5fccc 90%, #d7d382 100%);
+    rotate: -5deg;
+}
+
+#q2, #q4, #q8{
+    height: 300px;
+    width: 300px;
+    background-color: hsl(122, 96%, 90%);
+    border: 1px solid black;
+    background-image: linear-gradient(var(--verde) 0%, var(--verde) 75%, #9dbc9e 90%, #567760 100%);
+    rotate: 5deg;
+}
+
+#q3, #q6{
+    height: 300px;
+    width: 300px;
+    background-color: #cacafa;
+    border: 1px solid black;
+    background-image: linear-gradient(var(--viola) 0%, var(--viola) 75%, #8b8c9b 90%, #8b8c9b 100%);
+    rotate: -9deg;
+   
+}
+
+#q1:hover, #q2:hover, #q3:hover, #q4:hover, #q5:hover, #q6:hover, #q7:hover, #q8:hover{
+    transform: scale(1.5); rotate: 0deg;
+   
+  
+}
+
+
