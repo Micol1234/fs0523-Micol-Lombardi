@@ -1,0 +1,4 @@
+@mixin floating($shadow-color: rgba(0, 0, 0, 0.2), $border: none) {
+    box-shadow: 0 4px 6px -1px $shadow-color, 0 2px 4px -1px $shadow-color;
+    border: $border;
+  }

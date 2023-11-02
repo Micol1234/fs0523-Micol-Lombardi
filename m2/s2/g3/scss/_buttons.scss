@@ -1,0 +1,17 @@
+$button-colors: (#6cff, #ff8700, #4caf50);
+
+@each $color in $button-colors {
+  .button-#{$color} {
+    background: $color;
+    color: $text-color;
+    @include title-big;
+    padding: $spacing-normal $spacing-large;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      background: darken($color, 10%);
+    }
+  }
+}

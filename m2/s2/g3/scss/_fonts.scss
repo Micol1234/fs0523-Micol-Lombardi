@@ -1,0 +1,11 @@
+Copy code
+$font-family: 'Arial', sans-serif;
+$font-size-small: 14px;
+$font-size-normal: 16px;
+$font-size-large: 20px;
+$font-size-xl: 24px;
+
+@mixin title-big {
+  font-size: $font-size-xl;
+  font-weight: bold;
+}
