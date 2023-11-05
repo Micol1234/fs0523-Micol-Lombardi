@@ -1,0 +1,91 @@
+@import 'reset';
+@import 'colors';
+@import 'fonts';
+@import 'spacing';
+@import 'buttons';
+@import 'mixins';
+@import 'animations';
+
+// Header/hero section styles
+.hero {
+  width: 100%;
+  background: url('hero-background.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-medium;
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      // Logo styles
+    }
+
+    .nav-links {
+      // Navigation links styles
+    }
+  }
+
+  .headline {
+    background: rgba($primary-color, 0.8);
+    color: $white;
+    padding: $spacing-medium;
+    border-radius: $border-radius;
+    text-align: center;
+
+    h1 {
+      // Headline styles
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: $spacing-small;
+
+      a {
+        @include button-styles; // Use the button mixin
+        // Button styles
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: $spacing-medium;
+  
+  .grid-item {
+    // Grid item styles
+  }
+}
+
+// Animation
+@keyframes fadeInAndSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero, .grid {
+  animation: fadeInAndSlide 0.5s ease-in-out;
+}
+
+.hero-image {
+    @include floating(rgba(255, 255, 255, 0.5), 2px solid #fff);
+    // Altri stili per l'immagine principale della hero
+  }
+  .grid-item {
+    @include floating(rgba(0, 0, 0, 0.1));
+    // Altri stili per le immagini della griglia
+  }
