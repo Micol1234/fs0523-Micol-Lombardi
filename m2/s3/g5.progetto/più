@@ -1,0 +1,12 @@
+{
+    "name": "Nokia 3310",                             //REQUIRED
+    "description": "indistructible cellphone",        //REQUIRED
+  "brand": "Nokia",                                   //REQUIRED
+    "image url": "https://example.com/3310.jpg",      //REQUIRED
+    "price": 99,                                      //REQUIRED
+    "_id": "5d318e1a8541744830bef139",                //SERVER GENERETED
+    "userId": "6385f782597b9d001545386b",              //SERVER GENERETED
+    "createAt": "2019-07-19T09:32:10.535Z",            //SERVER GENERETED
+    "updatedAt":"2019-07-19T09:32:10.535Z",             //SERVER GENERETED
+    "__v": 0                                             //SERVER GENERETED
+}

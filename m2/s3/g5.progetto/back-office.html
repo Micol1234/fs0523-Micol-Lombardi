@@ -1,0 +1,200 @@
+<!-- backOffice.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Office</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Back Office</h1>
+
+  
+    <form id="productForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" required>
+        <br>
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" required>
+        <br>
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" id="imageUrl" required>
+        <br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" required>
+        <br>
+
+        
+        <input type="hidden" id="productId">
+
+        <button type="submit" id="submitBtn">Create Product</button>
+        <button type="button" id="resetBtn">Reset Form</button>
+        <button type="button" id="editBtn">Edit Product</button>
+        <button type="button" id="deleteBtn">Delete Product</button>
+    </form>
+
+   
+    <script>
+        let editMode = false; 
+
+      
+        async function handleFormSubmission(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const description = document.getElementById('description').value;
+            const brand = document.getElementById('brand').value;
+            const imageUrl = document.getElementById('imageUrl').value;
+            const price = document.getElementById('price').value;
+
+            if (editMode) {
+             
+                const productId = document.getElementById('productId').value;
+                await fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZWFmOTI1NGU4ODAwMTgzZjE4NzQiLCJpYXQiOjE2OTk2MzE4NTksImV4cCI6MTcwMDg0MTQ1OX0.dxD7pCqXIA9nJ-QH-hMqzVwAxT9sSqCFCduhB0ov7kI',
+                    },
+                    body: JSON.stringify({
+                        name,
+                        description,
+                        brand,
+                        imageUrl,
+                        price,
+                    }),
+                });
+            } else {
+                
+                await fetch('https://striveschool-api.herokuapp.com/api/product/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZWFmOTI1NGU4ODAwMTgzZjE4NzQiLCJpYXQiOjE2OTk2MzE4NTksImV4cCI6MTcwMDg0MTQ1OX0.dxD7pCqXIA9nJ-QH-hMqzVwAxT9sSqCFCduhB0ov7kI',
+                    },
+                    body: JSON.stringify({
+                        name,
+                        description,
+                        brand,
+                        imageUrl,
+                        price,
+                    }),
+                });
+            }
+
+           
+            resetForm();
+
+            
+             fetchProducts();
+        }
+
+        function resetForm() {
+            document.getElementById('productForm').reset();
+            editMode = false;
+            document.getElementById('submitBtn').textContent = 'Create Product';
+            document.getElementById('editBtn').style.display = 'none';
+            document.getElementById('deleteBtn').style.display = 'none';
+        }
+
+        function handleEditButtonClick() {
+            const productId = document.getElementById('productId').value;
+
+     
+            editMode = true;
+            document.getElementById('submitBtn').textContent = 'Update Product';
+            document.getElementById('deleteBtn').style.display = 'inline';
+        }
+
+        
+        async function handleDeleteButtonClick() {
+            const productId = document.getElementById('productId').value;
+
+          
+            await fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZWFmOTI1NGU4ODAwMTgzZjE4NzQiLCJpYXQiOjE2OTk2MzE4NTksImV4cCI6MTcwMDg0MTQ1OX0.dxD7pCqXIA9nJ-QH-hMqzVwAxT9sSqCFCduhB0ov7kI',
+                },
+            });
+
+        
+            resetForm();
+
+            
+             fetchProducts();
+        }
+
+        
+        document.getElementById('productForm').addEventListener('submit', handleFormSubmission);
+        document.getElementById('resetBtn').addEventListener('click', resetForm);
+        document.getElementById('editBtn').addEventListener('click', handleEditButtonClick);
+        document.getElementById('deleteBtn').addEventListener('click', handleDeleteButtonClick);
+
+        function handleResetButtonClick() {
+            // Chiedi conferma prima di procedere con l'operazione
+            if (confirm("Are you sure you want to reset the form?")) {
+                resetForm();
+            }
+        }
+
+        function handleDeleteButtonClick() {
+            // Chiedi conferma prima di procedere con l'operazione
+            if (confirm("Are you sure you want to delete the product?")) {
+                // Continua con l'operazione di eliminazione
+                handleDeleteButtonClickInternal();
+            }
+        }
+
+        // Funzione di eliminazione interna per evitare di duplicare il codice
+        async function handleDeleteButtonClickInternal() {
+            const productId = document.getElementById('productId').value;
+
+        
+            try {
+                await fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZWFmOTI1NGU4ODAwMTgzZjE4NzQiLCJpYXQiOjE2OTk2MzE4NTksImV4cCI6MTcwMDg0MTQ1OX0.dxD7pCqXIA9nJ-QH-hMqzVwAxT9sSqCFCduhB0ov7kI',
+                    },
+                });
+
+                
+                resetForm();
+
+                
+                 fetchProducts();
+            } catch (error) {
+                showError("Error deleting the product. Please try again later.");
+            }
+        }
+
+        // Funzione per mostrare un messaggio di errore utilizzando Bootstrap
+        function showError(message) {
+            // Rimuovi eventuali messaggi di errore esistenti
+            const existingAlert = document.querySelector('.alert');
+            if (existingAlert) {
+                existingAlert.remove();
+            }
+
+            // Crea un elemento di avviso di errore Bootstrap
+            const errorAlert = document.createElement('div');
+            errorAlert.className = 'alert alert-danger mt-3';
+            errorAlert.textContent = message;
+
+            // Inserisci l'elemento di avviso nel documento
+            document.body.insertBefore(errorAlert, document.getElementById('productForm'));
+        }
+
+        // Event listeners
+        document.getElementById('resetBtn').addEventListener('click', handleResetButtonClick);
+        document.getElementById('editBtn').addEventListener('click', handleEditButtonClick);
+        document.getElementById('deleteBtn').addEventListener('click', handleDeleteButtonClick);
+    </script>
+</body>
+</html>
