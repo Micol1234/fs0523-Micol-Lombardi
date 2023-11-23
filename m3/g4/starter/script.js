@@ -36,7 +36,7 @@ class CapoAbbigliamento {
 // Funzione per eseguire la fetch dell'API
 function fetchAPI() {
     return __awaiter(this, void 0, void 0, function* () {
-        const apiUrl = 'starter/Abbigliamento.json';
+        const apiUrl = 'Abbigliamento.json';
         try {
             const response = yield fetch(apiUrl);
             const data = yield response.json();

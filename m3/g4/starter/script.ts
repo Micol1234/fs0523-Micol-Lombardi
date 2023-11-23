@@ -55,7 +55,7 @@ type CapoAbbigliamentoData = {
   
   // Funzione per eseguire la fetch dell'API
   async function fetchAPI(): Promise<CapoAbbigliamentoData[]> {
-    const apiUrl = 'starter/Abbigliamento.json'; 
+    const apiUrl = 'Abbigliamento.json'; 
     
   
     try {
