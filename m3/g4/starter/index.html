@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abiti</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="mt-4 mb-4">CRUD Interface</h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Codice Prodotto</th>
+          <th>Collezione</th>
+          <th>Capo</th>
+          <th>Quantità</th>
+          <th>Colore</th>
+          <th>Prezzo (IVA Inclusa)</th>
+          <th>Disponibilità</th>
+          <th>Saldo</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+      </tbody>
+    </table>
+
+    <form id="crudForm">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="codprod">Codice Prodotto:</label>
+          <input type="text" class="form-control" id="codprod" name="codprod" required>
+        </div>
+        <div class="col-md-6">
+          <label for="collezione">Collezione:</label>
+          <input type="text" class="form-control" id="collezione" name="collezione" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <label for="capo">Capo:</label>
+          <input type="text" class="form-control" id="capo" name="capo" required>
+        </div>
+        <div class="col-md-6">
+          <label for="quantita">Quantità:</label>
+          <input type="number" class="form-control" id="quantita" name="quantita" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <label for="colore">Colore:</label>
+          <input type="text" class="form-control" id="colore" name="colore" required>
+        </div>
+        <div class="col-md-6">
+          <label for="prezzoivainclusa">Prezzo (IVA Inclusa):</label>
+          <input type="number" step="0.01" class="form-control" id="prezzoivainclusa" name="prezzoivainclusa" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <label for="disponibile">Disponibilità:</label>
+          <select class="form-control" id="disponibile" name="disponibile" required>
+            <option value="negozio">Negozio</option>
+            <option value="magazzino">Magazzino</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="saldo">Saldo:</label>
+          <input type="number" step="0.01" class="form-control" id="saldo" name="saldo" required>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="addOrUpdateRow()">Aggiungi/Aggiorna</button>
+    </form>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+  <script src="script.js">
+  </script>
+
+</body>
+</html>
