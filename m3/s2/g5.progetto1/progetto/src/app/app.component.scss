@@ -1,0 +1,28 @@
+/* src/app/app.component.scss */
+header {
+  background-color: #333; /* Colore di sfondo a tua scelta */
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px; /* Spazio tra le voci del menu a tua scelta */
+}
+
+a {
+  color: white; /* Colore del testo a tua scelta */
+  text-decoration: none;
+  font-size: 18px; /* Dimensione del testo a tua scelta */
+}

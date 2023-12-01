@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "completed": true,
+      "title": "lavare i panni",
+      "id": 1
+    },
+    {
+      "completed": false,
+      "title": "fare spesa",
+      "id": 2
+    },
+    {
+      "completed": false,
+      "title": "",
+      "id": 3
+    },
+    {
+      "completed": false,
+      "title": "lavare i panni",
+      "id": 4
+    },
+    {
+      "completed": false,
+      "title": "studiare",
+      "id": 5
+    },
+    {
+      "completed": false,
+      "title": "studiare",
+      "id": 6
+    }
+  ]
+}

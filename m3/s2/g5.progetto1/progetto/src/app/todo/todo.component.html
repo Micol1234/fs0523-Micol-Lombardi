@@ -1,0 +1,14 @@
+<div *ngIf="loading">
+  Caricamento...
+</div>
+<form>
+  <input type="text" placeholder="task" [(ngModel)]="newTodo.title" name="task" >
+  <select name=""[(ngModel)]="newTodo.completed" >
+    <option value="1">Completed</option>
+    <option value="0">Todo</option>
+  </select>
+</form>
+<button (click)="save()">Salva</button>
+
+
+
