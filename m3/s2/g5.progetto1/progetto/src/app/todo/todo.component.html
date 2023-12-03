@@ -9,6 +9,12 @@
   </select>
 </form>
 <button (click)="save()">Salva</button>
+<table *ngIf="todos.length">
+  <tr *ngFor="let p of todos">
 
+    <td>{{p.title}}</td>
+   <td><button>Completato</button></td>
+  </tr>
+</table>
 
 

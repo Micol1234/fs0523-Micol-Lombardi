@@ -9,9 +9,10 @@ import { Todos } from '../Models/todos';
   styleUrl: './todo.component.scss'
 })
 export class TodoComponent {
-tasks: any;
-taskForm: any;
 todos: any;
+
+
+
 constructor(private todosService: TodosService) { }
 
 
@@ -25,8 +26,16 @@ save(){
   this.loading=true
   this.newTodo.completed= Boolean(Number(this.newTodo.completed))
   this.todosService.create(this.newTodo).then(res=>{this.loading=false;});
+  this.todosService.getByCompleted(false).then(todos => this.todos = todos)
+
+
 
 }
+ngOnInit(){
+  this.todosService.getByCompleted(false).then(todos => this.todos = todos)
+}
+
+
 
 }
 

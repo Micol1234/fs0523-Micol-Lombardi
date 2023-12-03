@@ -5,6 +5,7 @@ import { Todos } from './Models/todos';
   providedIn: 'root'
 })
 export class TodosService {
+  check: any;
 
 
   constructor() { }
@@ -14,6 +15,10 @@ export class TodosService {
   }
   getById(id:string):Promise<Todos>{
     return fetch(this.apiUrl+ `/${id}`).then(res=>res.json())
+
+   }
+   getByCompleted(completed:boolean):Promise<Todos[]>{
+    return fetch(this.apiUrl+ `?completed=${completed}`).then(res=>res.json())
    }
    create(todos:Partial<Todos>):Promise<Todos>{
     return fetch(this.apiUrl,

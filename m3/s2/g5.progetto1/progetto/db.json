@@ -1,34 +1,29 @@
 {
   "todos": [
     {
-      "completed": true,
-      "title": "lavare i panni",
+      "completed": false,
+      "title": "Studiare",
       "id": 1
     },
     {
       "completed": false,
-      "title": "fare spesa",
+      "title": "lavare il pavimento",
       "id": 2
     },
     {
-      "completed": false,
-      "title": "",
+      "completed": true,
+      "title": "fare la spesa",
       "id": 3
     },
     {
       "completed": false,
-      "title": "lavare i panni",
+      "title": "stendere i panni",
       "id": 4
     },
     {
-      "completed": false,
-      "title": "studiare",
+      "completed": true,
+      "title": "lavare i panni",
       "id": 5
-    },
-    {
-      "completed": false,
-      "title": "studiare",
-      "id": 6
     }
   ]
 }

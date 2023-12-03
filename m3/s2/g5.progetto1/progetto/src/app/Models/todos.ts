@@ -1,9 +1,8 @@
 import { iTodos } from "./itodos";
 
 export class Todos implements iTodos {
-  static filter(arg0: (task: any) => boolean): any {
-    throw new Error('Method not implemented.');
-  }
+  static completed: boolean;
+
 
   constructor(   public title: string,
     public completed: boolean|string ,

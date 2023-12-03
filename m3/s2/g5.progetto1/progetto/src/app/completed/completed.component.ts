@@ -15,7 +15,7 @@ export class ListaComponent {
   constructor(private TodosService:TodosService){}
 
   ngOnInit(){
-    this.TodosService.getAll().then(todos => this.todos = todos)
+    this.TodosService.getByCompleted(true).then(todos => this.todos = todos)
   }
 
   delete(id:number |undefined){
@@ -24,6 +24,7 @@ export class ListaComponent {
     this.TodosService.delete(id).then(res => {
 
       this.todos =  this.todos.filter(p => p.id != id);
+
 
     })
   }

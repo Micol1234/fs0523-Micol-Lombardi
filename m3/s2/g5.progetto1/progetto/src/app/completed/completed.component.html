@@ -4,15 +4,14 @@
 
 <table *ngIf="todos.length">
   <tr>
-    <th>#</th>
-    <th>Titolo</th>
-    <th>Completato</th>
+    <th>Task completati</th>
+
 
 
   </tr>
   <tr *ngFor="let p of todos">
-    <td>{{p.id}}</td>
+
     <td>{{p.title}}</td>
-    <td>{{p.completed}}</td>
+
   </tr>
 </table>

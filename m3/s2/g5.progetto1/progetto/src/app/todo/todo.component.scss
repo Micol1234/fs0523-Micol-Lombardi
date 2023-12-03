@@ -1,0 +1,58 @@
+div[loading] {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+form {
+  margin-bottom: 20px;
+
+  input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    width: 200px;
+  }
+
+  select {
+    padding: 5px;
+  }
+
+  button {
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #45a049;
+    }
+  }
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid #ddd;
+
+    td {
+      padding: 8px;
+    }
+
+    button {
+      padding: 5px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+  }
+}
