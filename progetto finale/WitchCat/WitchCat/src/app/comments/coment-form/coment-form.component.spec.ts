@@ -11,7 +11,7 @@ describe('ComentFormComponent', () => {
       declarations: [ComentFormComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ComentFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

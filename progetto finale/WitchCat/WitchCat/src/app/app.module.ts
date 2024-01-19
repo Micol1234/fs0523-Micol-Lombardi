@@ -17,6 +17,7 @@ import { ComentListComponent } from './comments/coment-list/coment-list.componen
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PostCardComponent } from './layouts/post-card/post-card.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PostCardComponent } from './layouts/post-card/post-card.component';
     ComentFormComponent,
     ComentListComponent,
     AboutUsComponent,
-    PostCardComponent
+    PostCardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
