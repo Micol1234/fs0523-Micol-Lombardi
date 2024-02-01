@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
 :root {
-  --main-bg-color: rgb(170, 233, 233);
+  --main-bg-color: rgb(125, 5, 129);
   --gradient-start: rgb(177, 214, 214);
-  --gradient-mid: rgb(75, 8, 77);
+  --gradient-mid: rgb(0, 0, 0);
   --gradient-end: rgb(207, 195, 168);
-  --copyright-bg: rgb(186, 114, 167);
+  --copyright-bg: rgb(98, 98, 98);
 
 }
 
@@ -42,7 +39,8 @@ label {
   cursor: pointer;
 }
 
-
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
 
 .wbutton {
   border: none;
@@ -58,11 +56,11 @@ label {
     color: rgb(252, 252, 252);
   }
   &:hover {
-    background-color: rgb(80, 160, 80);
+    background-color: rgb(119, 80, 160);
     color: white;
   }
   &.card-button:hover {
-    background-color: rgb(80, 160, 160);
+    background-color: rgb(129, 80, 160);
     color: white;
   }
   &.profile-button:hover {
@@ -70,7 +68,7 @@ label {
     color: white;
   }
   &.selected {
-    background-color: rgb(80, 160, 160);
+    background-color: rgb(148, 80, 160);
     color: white;
   }
   &.modifica:hover {

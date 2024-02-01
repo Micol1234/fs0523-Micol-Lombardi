@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Layouts/header/header.component';
-import { FooterComponent } from './Layouts/footer/footer.component';
-import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './Component/header/header.component';
+import { FooterComponent } from './Component/footer/footer.component';
+import { NotificaComponent } from './notifica/notifica.component';
+
 import { SharedModule } from './shared/shared.module';
-import { LoginComponent } from './pages/auth/login/login.component';
-import { RegisterComponent } from './pages/auth/register/register.component';
-import { IntroComponent } from './pages/auth/intro/intro.component';
-import { AuthComponent } from './pages/auth/auth.component';
+import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
@@ -20,22 +18,19 @@ import { AuthComponent } from './pages/auth/auth.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent,
-    RegisterComponent,
-    IntroComponent,
-    AuthComponent,
+    NotificaComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     NgbModule,
-    NgbCollapse,
-    SharedModule
-
-
+    NgbCollapse
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+
+}
